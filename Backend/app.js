@@ -11,7 +11,8 @@ import paymentRoutes from './routes/payment.routes.js'
 const app=express();
 import cors from 'cors'
 import  errorMiddleware from   './middlewares/error.middleware.js'
-import  connectToDB from "../server/config/dbConnection.js"
+// import  connectToDB from "../server/config/dbConnection.js"
+import connectToDB from './config/dbConnection.js'
 import morgan  from 'morgan'
 app.use(express.json())
 
