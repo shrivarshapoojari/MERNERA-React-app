@@ -16,10 +16,7 @@ import connectToDB from './config/dbConnection.js'
 import morgan  from 'morgan'
 app.use(express.json())
 
-app.use(cors({
-    origin:[process.env.FRONTEND_URL],
-    credentials:true
-}))
+app.use(cors())
 app.use(morgan('dev'))
 
 connectToDB();
