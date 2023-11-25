@@ -35,8 +35,8 @@ const Second = ({children}) => {
     }
 
   return (
-    <div className='min-h-[90vh]'>
-    <div className="navbar bg-base-100">
+    <div className='min-h-[90vh] bg-slate-900 '>
+    <div className="navbar bg-base-100 bg-slate-900">
   <div className="flex-1">
     
     <Link className='btn btn-ghost text-xl text-purple-500 font-semibold border border-purple-500 hover:font-bold hover:border-purple-600 ' to='/'>MERN LEARN</Link>
@@ -48,10 +48,10 @@ const Second = ({children}) => {
           <BsBook className='w-10 h-8 mr-1 text-purple-500'/>
         </div>
       </label>
-      <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow-[0_0_100px_purple]">
+      <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52  shadow-[0_0_100px_purple] bg-slate-900">
         <div className="card-body">
-          <span className="font-bold text-lg">View Courses</span>
-          <span className="text-info">at  ₹ 499</span>
+          <span className="font-bold text-lg text-white">View Courses</span>
+          <span className="text-info text-white">at  ₹ 499</span>
           <div className="card-actions">
             <button className="btn btn-primary btn-block " onClick={handlebutton}>View Courses</button>
           </div>
@@ -67,28 +67,28 @@ const Second = ({children}) => {
           
         </div>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2  bg-base-100 rounded-box w-52 shadow-[0_0_100px_purple]">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2  bg-base-100 rounded-box w-52 shadow-[0_0_100px_purple] bg-slate-900">
         <li>
             
-          <Link to='/' className='justify-between text-white'>Home</Link>
+          <Link to='/' className='justify-between text-white hover:text-white hover:bg-purple-500'>Home</Link>
         </li>
-        <li> <Link to='/about' className='justify-between text-white'>About Us</Link> </li>
-        <li> <Link to='/contact' className='justify-between text-white'>Contact Us</Link> </li>
-        <li><Link to='/courses' className='justify-between text-white'>Courses</Link></li>
+        <li> <Link to='/about' className='justify-between text-white hover:text-white hover:bg-purple-500 '>About Us</Link> </li>
+        <li> <Link to='/contact' className='justify-between text-white hover:text-white hover:bg-purple-500'>Contact Us</Link> </li>
+        <li><Link to='/courses' className='justify-between text-white hover:text-white hover:bg-purple-500'>Courses</Link></li>
         {
             isLoggedIn && role=="ADMIN" &&
             (<li>
-                <Link to='/courses/create' className='justify-between text-white'>Add Course</Link>
+                <Link to='/courses/create' className='justify-between text-white hover:text-white hover:bg-purple-500'>Add Course</Link>
             </li>)
             
          }
         {
             !isLoggedIn ? ( <div>
-            <li><Link to='/login' className='justify-between text-white'>Login</Link></li>
-            <li><Link to='/signup' className='justify-between text-white'>Sign Up</Link></li> 
+            <li><Link to='/login' className='justify-between text-white hover:text-white hover:bg-purple-500'>Login</Link></li>
+            <li><Link to='/signup' className='justify-between text-white hover:text-white'>Sign Up</Link></li> 
             </div>):(<div>
-            <li><Link to='/user/profile' className='justify-between text-white'>Profile</Link></li>
-            <li><Link onClick={onLogout} className='justify-between text-white'>Logout</Link></li> 
+            <li><Link to='/user/profile' className='justify-between text-white hover:text-white hover:bg-purple-500'>Profile</Link></li>
+            <li><Link onClick={onLogout} className='justify-between text-white hover:text-white hover:bg-purple-500'>Logout</Link></li> 
             </div>
             )
 
