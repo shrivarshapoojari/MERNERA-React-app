@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import axiosInstance  from "../../config/axiosInstance"
 
 const dataFromLocalStorage = localStorage.getItem('data');
-const udata = dataFromLocalStorage !== null ? JSON.parse(dataFromLocalStorage) : {};
+const udata = (dataFromLocalStorage !== null ||dataFromLocalStorage !==undefined) ? JSON.parse(dataFromLocalStorage) : {};
 
 const initialState={
     isLoggedIn:localStorage.getItem("isLoggedIn") || false,
