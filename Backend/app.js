@@ -15,7 +15,7 @@ import  errorMiddleware from   './middlewares/error.middleware.js'
 import connectToDB from './config/dbConnection.js'
 import morgan  from 'morgan'
 app.use(express.json())
-const allowedOrigin = 'https://mernlearn.vercel.app';
+const allowedOrigin = 'https://mernera.vercel.app/';
 
 app.use(cors({
     origin: allowedOrigin,
